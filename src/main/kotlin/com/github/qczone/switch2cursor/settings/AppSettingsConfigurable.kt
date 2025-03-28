@@ -10,7 +10,7 @@ import com.intellij.util.ui.FormBuilder
 class AppSettingsConfigurable : Configurable {
     private var mySettingsComponent: AppSettingsComponent? = null
 
-    override fun getDisplayName(): String = "Open In Cursor"
+    override fun getDisplayName(): String = "Open In Cursor/Trae"
 
     override fun createComponent(): JComponent {
         mySettingsComponent = AppSettingsComponent()
@@ -43,7 +43,7 @@ class AppSettingsComponent {
 
     init {
         panel = FormBuilder.createFormBuilder()
-            .addLabeledComponent(JBLabel("Cursor Path: "), cursorPathText, 1, false)
+            .addLabeledComponent(JBLabel("Cursor/Trae Path: "), cursorPathText, 1, false)
             .addComponentFillVertically(JPanel(), 0)
             .panel
     }

@@ -46,15 +46,15 @@ class OpenProjectInCursorAction : AnAction() {
                 ${ex.message}
                 
                 Please check:
-                1. Cursor path is correctly configured in Settings > Tools > Switch2Cursor
-                2. Cursor is properly installed on your system
-                3. The configured path points to a valid Cursor executable
+                1. Cursor/Trae path is correctly configured in Settings > Tools > Switch2Cursor
+                2. Cursor/Trae is properly installed on your system
+                3. The configured path points to a valid Cursor/Trae executable
                 """.trimIndent(),
                 "Error"
             )
         }
 
-        WindowUtils.activeWindow()
+        WindowUtils.activeWindow(cursorPath)
     }
 
     override fun update(e: AnActionEvent) {
